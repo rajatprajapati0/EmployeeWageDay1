@@ -4,7 +4,8 @@ namespace EmployeeWage
 {
     internal class Program
     {
-        const int present = 1;
+        const int fullDay = 1;
+        const int halfDay = 2;
         const int empWagePerHour = 20;
         static void Main(string[] args)
         {
@@ -12,12 +13,17 @@ namespace EmployeeWage
 
             Console.WriteLine("Welcome To EmployeeWage Computation Program\n");
             Random rnd = new Random();
-            int checke=rnd.Next(0,2);
+            int checke=rnd.Next(0,3);
             
-            if (checke==present)
+            if (checke==fullDay)
             {
-                Console.WriteLine("Emplyee is Present");
+                Console.WriteLine("Emplyee is Present For Full Day");
                 empPerDayHour = 8;
+            }
+            else if (checke == halfDay)
+            {
+                Console.WriteLine("Emplyee is Present For Half Day");
+                empPerDayHour = 4;
             }
             else
             {
